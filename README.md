@@ -5,3 +5,5 @@
 * There is a total method that returns how much is owed.
 * There is a pay method that takes one floating number for how much is paid. It should return how much change is given.
 * When the Cash Register is initialized is should begin with a starting balance of 0.
+
+  #### TDD - Write the tests first!!

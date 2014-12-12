@@ -1,22 +1,19 @@
 require_relative "../lib/cash_register"
 
 describe "Cash Register" do
-  it "exists" do
-    my_register = CashRegister.new
+  describe "#total" do
+    it "intial total" do
+      my_register = CashRegister.new
 
-    expect(my_register).to_not be nil
+      expect(my_register.total).to eq 0
+    end
   end
 
-  it "intial total" do
-    my_register = CashRegister.new
-
-    expect(my_register.total).to eq 0
-  end
-
-  describe "purchase" do
+  describe "#purchase" do
     it "add to total" do
       my_register = CashRegister.new
       my_register.purchase(3.14)
+      
       expect(my_register.total).to eq(3.14)
     end
 
@@ -31,7 +28,7 @@ describe "Cash Register" do
     end
   end
 
-  describe "pay" do
+  describe "#pay" do
     it "takes a float (payment) and returns float (change)" do
       my_register = CashRegister.new
       my_register.purchase(11.51)

@@ -12,15 +12,14 @@ class CashRegister
   end
 
   def pay(payment_amt)
-
     change = payment_amt - @total
+
     if payment_amt > total
       @total = 0
     else
-      @total = @total - payment_amt
+      @total -= payment_amt
     end
 
     change
   end
-
 end
